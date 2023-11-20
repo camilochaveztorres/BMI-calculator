@@ -69,21 +69,61 @@ namespace Assignment_3
         private void btnOK_Click(object sender, EventArgs e)
         {
             // 1 read input
+            bool ok = ReadInput();
+
             // 2 Calculate
             // 3 show results
+
+        }
+
+        private bool ReadInput()
+        {
+            ReadName();
+            bool HeightOk = ReadHeight();
+            bool WeightOk = ReadWeight();
+
+            return HeightOk && WeightOk;
+        }
+
+        private void ReadName() {
             name = txtName.Text.Trim();
             grpResults.Text = name;
 
+        }
+        private bool ReadHeight() {
             double height = 0.0;
-            double weight = 0.0;
+            
+            double inch = 0.0;
 
             //try parse
 
             bool ok = double.TryParse(txtCentimeter.Text, out height);
-            if ( !ok )
+            if (!ok)
             {
                 MessageBox.Show("The height value is invalid.", "Error!");
             }
+
+            if (rbtnImperial.Checked)
+            {
+                ok = ok && double.TryParse(txtInch.Text, out height);
+                if (!ok)
+                {
+                    MessageBox.Show("The inch value is invalid.", "Error!");
+                }
+            }
+            return ok;
+        }
+
+        private bool ReadWeight() { 
+
+            double weight = 0.0;
+            bool ok = double.TryParse(txtKg.Text, out weight);
+            if (!ok)
+            {
+                MessageBox.Show("The weight value is invalid.", "Error!");
+            }
+
+            return ok;
         }
 
         private void label3_Click(object sender, EventArgs e)

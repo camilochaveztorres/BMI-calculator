@@ -36,16 +36,15 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.lblNormalBMI = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnMetric = new System.Windows.Forms.RadioButton();
             this.rbtnImperial = new System.Windows.Forms.RadioButton();
+            this.rbtnMetric = new System.Windows.Forms.RadioButton();
             this.grpResults = new System.Windows.Forms.GroupBox();
             this.lblWeightCat = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblBMI = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtKg = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.grpResults.SuspendLayout();
             this.SuspendLayout();
@@ -127,18 +126,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unit";
             // 
-            // rbtnMetric
-            // 
-            this.rbtnMetric.AutoSize = true;
-            this.rbtnMetric.Location = new System.Drawing.Point(22, 34);
-            this.rbtnMetric.Name = "rbtnMetric";
-            this.rbtnMetric.Size = new System.Drawing.Size(114, 20);
-            this.rbtnMetric.TabIndex = 0;
-            this.rbtnMetric.TabStop = true;
-            this.rbtnMetric.Text = "Metric (kg, cm)";
-            this.rbtnMetric.UseVisualStyleBackColor = true;
-            this.rbtnMetric.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // rbtnImperial
             // 
             this.rbtnImperial.AutoSize = true;
@@ -150,6 +137,18 @@
             this.rbtnImperial.Text = "Imperial (ft, lbs)";
             this.rbtnImperial.UseVisualStyleBackColor = true;
             this.rbtnImperial.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // rbtnMetric
+            // 
+            this.rbtnMetric.AutoSize = true;
+            this.rbtnMetric.Location = new System.Drawing.Point(22, 34);
+            this.rbtnMetric.Name = "rbtnMetric";
+            this.rbtnMetric.Size = new System.Drawing.Size(114, 20);
+            this.rbtnMetric.TabIndex = 0;
+            this.rbtnMetric.TabStop = true;
+            this.rbtnMetric.Text = "Metric (kg, cm)";
+            this.rbtnMetric.UseVisualStyleBackColor = true;
+            this.rbtnMetric.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // grpResults
             // 
@@ -219,27 +218,19 @@
             this.lblWeight.Text = "Weight";
             this.lblWeight.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // txtKg
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 22);
-            this.textBox1.TabIndex = 14;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(252, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 22);
-            this.textBox2.TabIndex = 15;
+            this.txtKg.Location = new System.Drawing.Point(163, 136);
+            this.txtKg.Name = "txtKg";
+            this.txtKg.Size = new System.Drawing.Size(74, 22);
+            this.txtKg.TabIndex = 14;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtKg);
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.grpResults);
             this.Controls.Add(this.groupBox1);
@@ -280,8 +271,7 @@
         private System.Windows.Forms.Label lblBMI;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtKg;
     }
 }
 
